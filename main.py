@@ -1,4 +1,5 @@
 from bot import CoolBot
+from keep_alive import keep_alive
 import discord
 
 import os
@@ -13,6 +14,7 @@ def main():
     bot.intents.presences = True
     bot.intents.guilds = True
     bot.intents.messages = True
+    keep_alive()
     bot.run(token)
 
 if __name__ == '__main__':
