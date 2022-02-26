@@ -1,0 +1,29 @@
+I can embed problems in <#942764372164481094> or <#899532443244195881>.
+My command syntex (must include the "{}" around any data): 
+```
+command -flag{option}
+-flag {data}
+<attchment/image> 
+```
+Here is a list of options:
+```
+Commands:
+"-cool" - Embed and send problem to #cool-problems
+"-marathon" - Embed and send problem to #marathon-problems
+
+Flags:
+"-title" - Title for the problem.(may include problem no.)
+"-problem" - Statement or description for the problem.
+"-hint" - (optional) Hint for the problem. Should be spoilered("|| spoiler ||")
+"-source" - (optional) Source of the problem(spoiler)
+"-difficulty" - (optional) Estimated difficulty of the problem(spoiler)
+```
+May include image attachment of the problem.
+```
+Example:
+-cool -title {Cool Problem 10}
+-problem {Show that the product of any n consecutive natural numbers is divisible by n!}
+-difficulty{||100||}
+-hint{||Can binomial coeffecient help us?||}
+-source{||idk😁||}
+```
