@@ -18,7 +18,7 @@ Flags:
 "-source" - (optional) Source of the problem(spoiler)
 "-difficulty" - (optional) Estimated difficulty of the problem(spoiler) [Use -rating to know about the difficulty scale and don't add it if you can't estimate the difficulty properly]
 ```
-Must include image attachment of the problem.
+You must include image attachment of the problem.
 ```
 Example:
 -cool -title {Warrior Chess}
