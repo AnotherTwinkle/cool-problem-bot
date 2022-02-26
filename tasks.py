@@ -15,15 +15,16 @@ class BotTasks():
         if datas["-title"] == None: datas["-title"] = "Problem"
 
         # Set up embed
-        embed = discord.Embed(title = datas["-title"],
-            description = datas["-problem"],
-            colour = 0x0CE886)
+        embed = discord.Embed(title = datas["-title"] if datas["-title"] != None else "Random Cool Problem",
+            colour = 0x0066CB)
 
         # Show message author in embed
         embed.set_author(name = message.author.display_name, icon_url = message.author.avatar_url)
         # Add image to embed if any attachment is given
         if len(message.attachments) > 0:
             embed.set_image(url = message.attachments[0].url)
+        else:
+            return -1
         # Add fields according to given flags
         if datas["-hint"] != None:
             embed.add_field(name = "Hint", value = datas["-hint"], inline = False)
@@ -32,7 +33,7 @@ class BotTasks():
         if datas["-difficulty"] != None:
             embed.add_field(name = "Difficulty", value = datas["-difficulty"])
         if command == "-cool":
-            embed.set_footer(text = "Is it cool 🆒?")
+            embed.set_footer(text = "Is the problem cool 🆒?")
 
         return embed
 
@@ -41,7 +42,11 @@ class BotTasks():
         if to_channel == None or message.channel.name == "tst-bots-and-spam":
             to_channel = message.channel
         try:
-            problem_msg = await to_channel.send(embed = self.embed_problem(message, command))
+            embed = self.embed_problem(message, command)
+            if embed == -1:
+                await message.channel.send("❗\nNo attachment found!")
+                return
+            problem_msg = await to_channel.send(embed = embed)
             await problem_msg.add_reaction("❌")
             ok_msg = await message.channel.send("✅\nSent the problem to {0.mention}\nYou can edit the message to resend or delete the problem by reacting ❌ in 1 minute".format(to_channel))
         except:

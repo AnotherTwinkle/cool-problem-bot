@@ -1,4 +1,4 @@
-I can embed problems in <#942764372164481094> or <#899532443244195881>.
+I can embed problems in <#942764372164481094>.
 My command syntex (must include the "{}" around any data): 
 ```
 command -flag{option}
@@ -8,22 +8,22 @@ command -flag{option}
 Here is a list of options:
 ```
 Commands:
-"-cool" - Embed and send problem to #cool-problems
-"-marathon" - Embed and send problem to #marathon-problems
+"-help" - Shows this message
+"-cool" - Embed and send problem to #cool-problems (Problem image should be attached with the command message)
+"-rating" - Shows an estimated difficulty rating of some contests (Use it to estimate the difficulty of your problem)
 
 Flags:
-"-title" - Title for the problem.(may include problem no.)
-"-problem" - Statement or description for the problem.
+"-title" - (optional) An interesting title for the problem (Default: "Random Cool Problem")
 "-hint" - (optional) Hint for the problem. Should be spoilered("|| spoiler ||")
 "-source" - (optional) Source of the problem(spoiler)
-"-difficulty" - (optional) Estimated difficulty of the problem(spoiler)
+"-difficulty" - (optional) Estimated difficulty of the problem(spoiler) [Use -rating to know about the difficulty scale and don't add it if you can't estimate the difficulty properly]
 ```
-May include image attachment of the problem.
+Must include image attachment of the problem.
 ```
 Example:
--cool -title {Cool Problem 10}
--problem {Show that the product of any n consecutive natural numbers is divisible by n!}
--difficulty{||100||}
--hint{||Can binomial coeffecient help us?||}
--source{||idk😁||}
+-cool -title {Warrior Chess}
+-difficulty{||5||}
+-hint{||Coloring the board||}
+-source{||BdMO 2019 HS P10||}
 ```
+And you have to attach the problem as an Image with the message

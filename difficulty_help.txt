@@ -1,0 +1,10 @@
+```
+Estimate the difficulty of your problem according to this scale:
+0-1: Easier than BdMO National
+2–5: BdMO National
+4–7: APMO P1-3
+8–10: APMO P4-5
+5–7: IMO 1/4
+7–9: IMO 2/5
+9–11: IMO 3/6
+```
