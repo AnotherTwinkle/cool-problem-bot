@@ -9,7 +9,7 @@ load_dotenv()
 
 def main():
     token = os.environ.get('TOKEN')
-    bot = CoolBot(intents = discord.Intents.all())
+    bot = CoolBot(intents = discord.Intents.none())
     bot.intents.members = True
     bot.intents.presences = True
     bot.intents.guilds = True
